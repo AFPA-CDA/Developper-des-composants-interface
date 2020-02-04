@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulaire</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">
+      Nous lançons une grande enquête sur les anciens stagiaires
+    </h1>
+    <sub>merci de nous répondre</sub>
+
+    <form action="http://bienvu.net/script.php" method="get">
+      <fieldset style="display: flex;">
+        <legend>Vos coordonnées</legend>
+        <label for="lastName">Votre nom</label>
+        <input type="text" name="lastName" id="lastName" />
+
+        <label for="firstName">Votre prénom</label>
+        <input type="text" name="firstName" id="firstName" />
+
+        <label for="birthDate">Votre date de naissance</label>
+        <input type="date" name="birthDate" id="birthDate" />
+
+        <label for="adresse">Votre adresse</label>
+        <input type="text" name="adresse" id="adresse" />
+
+        <label for="city">Votre ville</label>
+        <input type="text" name="city" id="city" />
+
+        <label for="postalCode">Votre code postal</label>
+        <input type="text" name="postalCode" id="postalCode" />
+
+        <label for="email">Votre email</label>
+        <input type="email" name="email" id="email" />
+      </fieldset>
+
+      <fieldset>
+        <label for="male">Vous êtes un homme</label>
+        <input type="checkbox" name="male" id="male" />
+
+        <label for="female">Vous êtes une femme</label>
+        <input type="checkbox" name="female" id="female" />
+      </fieldset>
+
+      <select name="work" id="work">
+        <option value="Développeur">Développeur</option></select
+      >
+      Si vous avez répondu autre, précisez
+      <input type="text" name="workOther" id="workOther" />
+
+      <br />
+      <br />
+
+      <select name="salary" id="salary">
+        <option value="<1000€">&lt;1000€</option>
+      </select>
+      En quelle année avez-vous suivi le stage afpa ?
+
+      <br />
+      <br />
+
+      <textarea name="comments" id="comments" cols="30" rows="10">
+        vos commentaires
+      </textarea>
+
+      <h1>Merci d'avoir répondu au questionnaire</h1>
+
+      <button type="submit">Validez</button>
+      <button type="reset">Annulez</button>
+    </form>
+  </body>
+</html>

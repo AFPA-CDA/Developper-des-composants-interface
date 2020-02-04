@@ -1,0 +1,20 @@
+Définition :
+Une méthode Agile est une approche itérative et collaborative, capable de prendre en compte les besoins initiaux du client et ceux liés aux évolutions.
+
+Extreme programming :
+Avec la méthodologie eXtreme Programming, managers, équipe projet et client travaillent en collaboration. 
+Cette approche privilégie la méthode la plus simple, favorise la réactivité de l'équipe et instaure un contrôle continu de la qualité.
+
+Pourquoi SCRUM ? :
+Contrairement à la gestion de projets traditionnelle, avec Scrum, on écrit et planifie moins mais on réalise davantage. 
+On ne travaille pas en parallèle mais on collabore au sein d’une équipe impliquée et autonome qui produit des résultats en peu de temps. 
+Le feedback est donné en continu, ce qui permet d’optimiser rapidement les actions et de réduire les risques d’erreur.
+
+Sprint :
+Dans le modèle agile de développement scrum, un sprint désigne une période pendant laquelle un travail spécifique doit être mené à bien avant de faire l'objet d'une révision.
+
+Intégration Continue :
+L’Intégration Continue consiste à intégrer les changements apportés au code informatique d’un projet logiciel de façon continuelle, afin de détecter et de corriger immédiatement les éventuelles erreurs.
+
+TDD :
+Le Test-Driven Development, est une méthode de développement de logiciel qui consiste à écrire chaque test avant d'écrire le code source d'un logiciel, de façon itérative

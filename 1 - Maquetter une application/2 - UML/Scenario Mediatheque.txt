@@ -1,0 +1,25 @@
+Cas N°1:
+Nom: Emprunter un livre
+Acteur(s): Personnel (Bénévole, Employé, Bibliothécaire)
+Date: 30/01/2020 (Première rédaction)
+
+Pré-conditions: Aucunes
+Démarrage: L'utilisateur veut emprunter un livre
+
+Scénario nominal:
+1 - L'utilisateur se connecte au système avec son email ainsi qu'un mot de passe 
+2 - Le système confirme la connexion de l'utilisateur
+3 - L'utilisateur présente au système la carte de lecteur et le document qu'il souhaite emprunter
+4 - Le système vérifie la validité de la carte
+5 - L'utilisateur réference l'emprunt par le numéro du lecteur et par la côté du document.
+6 - Le système génère une fiche de prêt avec les informations entrées par l'utilisateur.
+
+Scénario alternatifs:
+A - L'utilisateur ne dispose pas de carte de lecteur
+	4 - L'utilisateur entre les données nécessaire à la création de sa carte de lecteur
+	5 - Le système procède à la création de la carte de lecteur avec les informations entrée par l'utilisateur
+	6 - L'utilisateur demande au système d'imprimer la carte de lecteur
+ 	7 - Le système lance l'impression de la carte de lecteur
+B - L'utilisateur emprunte un CD-ROM
+	5 - Le système demande une caution
+	6 - L'utilisateur donne la caution
