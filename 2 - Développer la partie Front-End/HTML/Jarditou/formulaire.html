@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jarditou - Formualaire</title>
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <img
+          alt="Logo Jarditou"
+          src="assets/img/jarditou_logo.jpg"
+          title="Logo Jarditou"
+        />
+        <p>Tout le jardin</p>
+      </header>
+
+      <nav id="navbar">
+        <div>
+          <ul>
+            <li>
+              <a href="index.html">Accueil</a>
+            </li>
+
+            <li>
+              <a href="tableau.html">Tableau</a>
+            </li>
+
+            <li>
+              <a href="formulaire.html">Formulaire</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section>
+        <img src="assets/img/promotion.jpg" alt="Promotion" title="Promotion" />
+      </section>
+
+      <main>
+        <div>
+          <div>
+            <p>* Ces zones sont obligatoires</p>
+
+            <form action="http://bienvu.net/script.php" method="GET">
+              <fieldset>
+                <legend>Vos coordonnées</legend>
+
+                <div>
+                  <label for="nom">Votre nom* :</label>
+                  <input type="text" name="nom" required />
+                </div>
+
+                <div>
+                  <label for="prénom">Votre prénom* :</label>
+                  <input name="prénom" required type="text" />
+                </div>
+
+                <div>
+                  <label for="sexe">Sexe* :</label>
+
+                  <input type="radio" name="sexe" value="Féminin" required />
+                  Féminin
+                  <input type="radio" name="sexe" value="Masculin" />
+                  Masculin
+                </div>
+
+                <div>
+                  <label for="date">Date Naissance* :</label>
+                  <input type="date" name="date" required />
+                </div>
+
+                <div>
+                  <label for="postal">Code postal :</label>
+                  <input type="text" name="date" />
+                </div>
+
+                <div>
+                  <label for="adresse">Adresse :</label>
+                  <input type="text" name="adresse" />
+                </div>
+
+                <div>
+                  <label for="ville">Ville :</label>
+                  <input type="text" name="ville" />
+                </div>
+
+                <div>
+                  <label for="email">Email* :</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="dave.loper@afpa.fr"
+                    required
+                  />
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Votre demande</legend>
+
+                <div>
+                  <label for="sujet">Sujet* :</label>
+                  <select name="sujet" required>
+                    <option value="Mes commandes">Mes commandes</option>
+                    <option value="Question sur un produit"
+                      >Question sur un produit</option
+                    >
+                    <option value="Réclamation">Réclamation</option>
+                    <option value="Autres">Autres</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="question">Votre question* :</label>
+                  <textarea name="question" cols="20" rows="3"></textarea>
+                </div>
+              </fieldset>
+
+              <div>
+                <label for="cgu"
+                  ><input type="checkbox" name="cgu" required />J'accepte le
+                  traitement informatique de ce formulaire.</label
+                >
+              </div>
+
+              <input type="submit" value="Envoyer" />
+              <input type="reset" value="Annuler" />
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <ul>
+          <li><a href="#!">Mentions légales</a></li>
+          <li><a href="#!">Horaires</a></li>
+          <li><a href="#!">Plan du site</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
