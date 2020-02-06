@@ -9,21 +9,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/materialize.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>Jarditou - Accueil</title>
   </head>
   <body>
-    <nav class="teal lighten-1 z-depth-2">
+    <div class="container center-align">
+      <img
+        class="responsive-img"
+        src="assets/img/jarditou_logo.png"
+        alt="Logo Jarditou"
+        title="Logo jarditou"
+        width="400"
+      />
+    </div>
+
+    <nav class="animated bounceInLeft teal lighten-1 z-depth-2">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Jarditou</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="tableau.html">Tableau</a></li>
-          <li><a href="formulaire.html">Formulaire</a></li>
-        </ul>
+        <div class="container">
+          <a href="index.html" class="brand-logo">Jarditou</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tableau.html">Tableau</a></li>
+            <li><a href="formulaire.html">Formulaire</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -31,7 +44,73 @@
       <li><a href="index.html">Accueil</a></li>
       <li><a href="tableau.html">Tableau</a></li>
       <li><a href="formulaire.html">Formulaire</a></li>
+      <div class="divider"></div>
+      <li><a href="#!">Mentions légales</a></li>
+      <li><a href="#!">Horaires</a></li>
+      <li><a href="#!">Plan du site</a></li>
     </ul>
+
+    <img
+      src="assets/img/promotion.jpg"
+      alt="Promotions lames de terrasse"
+      title="Promotions lames de terrasse"
+      class="responsive-img materialboxed"
+      width="100%"
+    />
+
+    <section class="section">
+      <div class="row">
+        <div class="col s9">
+          <h4>Accueil</h4>
+          <h5>L'entreprise</h5>
+          <p>
+            Notre entreprise familiale met tout son savoir-faire à votre
+            disposition dans le domaine du jardin et du paysagisme.
+          </p>
+          <p>
+            Créée il y a 70 ans, notre entreprise vend fleurs, arbustes,
+            matériel à main et motorisés.
+          </p>
+          <p>
+            Implantés à Amiens, nous intervenons dans tout le département de la
+            Somme : Albert, Doullens, Péronne, Abbeville, Corbie.
+          </p>
+          <h5>Qualité</h5>
+          <p>
+            Notre entreprise familiale met tout son savoir-faire à votre
+            disposition dans le domaine du jardin et du paysagisme.
+          </p>
+          <p>
+            Vous serez séduit par notre expertise, nos compétences et notre
+            sérieux.
+          </p>
+          <h5>Devis gratuit</h5>
+          <p>
+            Vous pouvez bien sûr contacter pour de plus amples informations ou
+            pour une demande d’intervention. Vous souhaitez un devis ? Nous vous
+            le réalisons gratuitement.
+          </p>
+        </div>
+
+        <div class="col s3">
+          <p class="flow-text">Col droite</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="animated bounceInRight hide-on-med-and-down">
+      <nav class="teal lighten-1 z-depth-2">
+        <div class="nav-wrapper">
+          <div class="container">
+            <ul class="space-evenly">
+              <li><a href="#!">Mentions légales</a></li>
+              <li><a href="#!">Horaires</a></li>
+              <li><a href="#!">Plan du site</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
   </body>
 
   <script src="assets/js/jquery.min.js"></script>

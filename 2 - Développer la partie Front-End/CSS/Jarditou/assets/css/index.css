@@ -1,3 +1,14 @@
-.brand-logo {
-  padding-left: 1% !important;
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/* GLOBAL ELEMENTS */
+body {
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* CUSTOM CLASSES */
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
 }
