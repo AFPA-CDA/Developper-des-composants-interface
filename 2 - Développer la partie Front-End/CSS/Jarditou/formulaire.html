@@ -1,223 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/materialize.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Jarditou - Formulaire</title>
-  </head>
-  <body>
-    <div class="container center-align">
-      <img
-        class="responsive-img"
-        src="assets/img/jarditou_logo.png"
-        alt="Logo Jarditou"
-        title="Logo jarditou"
-        width="400"
-      />
-    </div>
 
-    <nav class="animated bounceInLeft teal lighten-1 z-depth-2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/materialize.min.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <title>Jarditou - Formulaire</title>
+</head>
+
+<body>
+  <div class="container center-align">
+    <img class="responsive-img" src="assets/img/jarditou_logo.png" alt="Logo Jarditou" title="Logo jarditou"
+      width="400" />
+  </div>
+
+  <nav class="teal lighten-1 z-depth-2">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="index.html" class="brand-logo">Jarditou</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="tableau.html">Tableau</a></li>
+          <li class="active"><a href="formulaire.html">Formulaire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="tableau.html">Tableau</a></li>
+    <li class="active"><a href="formulaire.html">Formulaire</a></li>
+    <div class="divider"></div>
+    <li><a href="#!">Mentions légales</a></li>
+    <li><a href="#!">Horaires</a></li>
+    <li><a href="#!">Plan du site</a></li>
+  </ul>
+
+  <img src="assets/img/promotion.jpg" alt="Promotions lames de terrasse" title="Promotions lames de terrasse"
+    class="responsive-img materialboxed" width="100%" />
+
+  <section class="section">
+    <div class="container">
+      <form action="http://bienvu.net/script.php" method="GET">
+        <span class="flow-text">Vos coordonnées</span>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="name">Votre nom :</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="input-field col s6">
+            <label for="firstName">Votre prénom :</label>
+            <input name="firstName" id="firstName" required type="text" />
+          </div>
+        </div>
+
+        <div class="row">
+          Sexe :
+          <p>
+            <label>
+              <input class="with-gap" id="gender" type="radio" name="gender" value="Féminin" />
+              <span>Femme</span>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input class="with-gap" type="radio" id="gender" name="gender" value="Masculin" />
+              <span>Masculin</span>
+            </label>
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="date">Date Naissance :</label>
+            <input class="datepicker" id="date" type="text" name="date" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="postal">Code postal :</label>
+            <input id="postal" type="text" name="postal" />
+          </div>
+          <div class="input-field col s6">
+            <label for="adress">Adresse :</label>
+            <input id="adress" type="text" name="adress" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="city">Ville :</label>
+            <input id="city" type="text" name="city" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="email">Email :</label>
+            <input id="email" type="email" name="email" placeholder="dave.loper@afpa.fr" required />
+          </div>
+        </div>
+
+        <span class="flow-text">Votre demande</span>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="subject" name="subject">
+              <option value="Mes commandes">Mes commandes</option>
+              <option value="Question sur un produit">Question sur un produit</option>
+              <option value="Réclamation">Réclamation</option>
+              <option value="Autres">Autres</option>
+            </select>
+            <label for="subject">Sujet :</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="question">Votre question :</label>
+            <textarea class="materialize-textarea" name="question" id="question" cols="20" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            <label for="cgu">
+              <input type="checkbox" id="cgu" name="cgu" required />
+              <span>J'accepte le traitement informatique de ce formulaire.</span>
+            </label>
+          </p>
+        </div>
+
+        <button class="btn waves-effect waves-light" id="submit" type="submit" name="submit">
+          Envoyer
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="hide-on-med-and-down">
+    <nav class="teal lighten-1 z-depth-2">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="index.html" class="brand-logo">Jarditou</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-            ><i class="material-icons">menu</i></a
-          >
-          <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="tableau.html">Tableau</a></li>
-            <li class="active"><a href="formulaire.html">Formulaire</a></li>
+          <ul class="space-evenly">
+            <li><a href="#!">Mentions légales</a></li>
+            <li><a href="#!">Horaires</a></li>
+            <li><a href="#!">Plan du site</a></li>
           </ul>
         </div>
       </div>
     </nav>
+  </footer>
+</body>
 
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="tableau.html">Tableau</a></li>
-      <li class="active"><a href="formulaire.html">Formulaire</a></li>
-      <div class="divider"></div>
-      <li><a href="#!">Mentions légales</a></li>
-      <li><a href="#!">Horaires</a></li>
-      <li><a href="#!">Plan du site</a></li>
-    </ul>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/index.js"></script>
 
-    <img
-      src="assets/img/promotion.jpg"
-      alt="Promotions lames de terrasse"
-      title="Promotions lames de terrasse"
-      class="responsive-img materialboxed"
-      width="100%"
-    />
-
-    <section class="section">
-      <div class="container">
-        <form action="http://bienvu.net/script.php" method="GET">
-          <span class="flow-text">Vos coordonnées</span>
-
-          <div class="row">
-            <div class="input-field col s6">
-              <label for="name">Votre nom :</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="input-field col s6">
-              <label for="firstName">Votre prénom :</label>
-              <input name="firstName" id="firstName" required type="text" />
-            </div>
-          </div>
-
-          <div class="row">
-            Sexe :
-            <p>
-              <label for="gender">
-                <input
-                  class="with-gap"
-                  id="gender"
-                  type="radio"
-                  name="gender"
-                  value="Féminin"
-                  required
-                />
-                <span>Femme</span>
-              </label>
-            </p>
-
-            <p>
-              <label for="gender">
-                <input
-                  class="with-gap"
-                  type="radio"
-                  id="gender"
-                  name="gender"
-                  value="Masculin"
-                  required
-                />
-                <span>Masculin</span>
-              </label>
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="date">Date Naissance :</label>
-              <input
-                class="datepicker"
-                id="date"
-                type="text"
-                name="date"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s6">
-              <label for="postal">Code postal :</label>
-              <input id="postal" type="text" name="postal" />
-            </div>
-            <div class="input-field col s6">
-              <label for="adress">Adresse :</label>
-              <input id="adress" type="text" name="adress" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="city">Ville :</label>
-              <input id="city" type="text" name="city" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="email">Email :</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="dave.loper@afpa.fr"
-                required
-              />
-            </div>
-          </div>
-
-          <span class="flow-text">Votre demande</span>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <select id="subject" name="subject">
-                <option value="Mes commandes">Mes commandes</option>
-                <option value="Question sur un produit"
-                  >Question sur un produit</option
-                >
-                <option value="Réclamation">Réclamation</option>
-                <option value="Autres">Autres</option>
-              </select>
-              <label for="subject">Sujet :</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="question">Votre question :</label>
-              <textarea
-                class="materialize-textarea"
-                name="question"
-                id="question"
-                cols="20"
-                rows="3"
-              ></textarea>
-            </div>
-          </div>
-
-          <div>
-            <p>
-              <label for="cgu">
-                <input type="checkbox" id="cgu" name="cgu" required />
-                <span
-                  >J'accepte le traitement informatique de ce formulaire.</span
-                >
-              </label>
-            </p>
-          </div>
-
-          <button
-            class="btn waves-effect waves-light"
-            id="submit"
-            type="submit"
-            name="submit"
-          >
-            Envoyer
-            <i class="material-icons right">send</i>
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <footer class="animated bounceInRight hide-on-med-and-down">
-      <nav class="teal lighten-1 z-depth-2">
-        <div class="nav-wrapper">
-          <div class="container">
-            <ul class="space-evenly">
-              <li><a href="#!">Mentions légales</a></li>
-              <li><a href="#!">Horaires</a></li>
-              <li><a href="#!">Plan du site</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </footer>
-  </body>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/materialize.min.js"></script>
-  <script src="assets/js/index.js"></script>
 </html>

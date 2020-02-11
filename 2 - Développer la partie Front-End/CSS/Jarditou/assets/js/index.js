@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $(".datepicker").datepicker({
     format: "dd/mm/yyyy",
     i18n: {
@@ -46,7 +46,6 @@ $(document).ready(function() {
     }
   });
   $(".materialboxed").materialbox();
-  $(".parallax").parallax();
   $("select").formSelect();
   $(".sidenav").sidenav();
 });

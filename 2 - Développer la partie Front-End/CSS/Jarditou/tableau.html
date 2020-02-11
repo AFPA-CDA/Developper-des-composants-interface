@@ -1,186 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/materialize.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Jarditou - Tableau</title>
-  </head>
-  <body>
-    <div class="container center-align">
-      <img
-        class="responsive-img"
-        src="assets/img/jarditou_logo.png"
-        alt="Logo Jarditou"
-        title="Logo jarditou"
-        width="400"
-      />
-    </div>
 
-    <nav class="animated bounceInLeft teal lighten-1 z-depth-2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/materialize.min.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <title>Jarditou - Tableau</title>
+</head>
+
+<body>
+  <div class="container center-align">
+    <img class="responsive-img" src="assets/img/jarditou_logo.png" alt="Logo Jarditou" title="Logo jarditou"
+      width="400" />
+  </div>
+
+  <nav class="teal lighten-1 z-depth-2">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="index.html" class="brand-logo">Jarditou</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="active"><a href="tableau.html">Tableau</a></li>
+          <li><a href="formulaire.html">Formulaire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="active"><a href="tableau.html">Tableau</a></li>
+    <li><a href="formulaire.html">Formulaire</a></li>
+    <div class="divider"></div>
+    <li><a href="#!">Mentions légales</a></li>
+    <li><a href="#!">Horaires</a></li>
+    <li><a href="#!">Plan du site</a></li>
+  </ul>
+
+  <img src="assets/img/promotion.jpg" alt="Promotions lames de terrasse" title="Promotions lames de terrasse"
+    class="responsive-img materialboxed" width="100%" />
+
+  <section class="section container">
+    <table class="animated jello centered responsive-table highlight">
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>ID</th>
+          <th>Catégorie</th>
+          <th>Libellé</th>
+          <th>Prix</th>
+          <th>Couleur</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <img class="responsive-img" src="assets/img/tableau/7.jpg" alt="Barbecue Aramis" title="Barbecue Aramis"
+              width="100" height="100" />
+          </td>
+          <td>7</td>
+          <td>Barbecues</td>
+          <td><a href="#!">Aramis</a></td>
+          <td>110.00€</td>
+          <td>Brun</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="responsive-img" src="assets/img/tableau/7.jpg" alt="Barbecue Athos" title="Barbecue Athos"
+              width="100" height="100" />
+          </td>
+          <td>8</td>
+          <td>Barbecues</td>
+          <td><a href="#!">Athos</a></td>
+          <td>249.99€</td>
+          <td>Noir</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="responsive-img" src="assets/img/tableau/11.jpg" alt="Barbecue Clatronic"
+              title="Barbecue Clatronic" width="100" height="100" />
+          </td>
+          <td>11</td>
+          <td>Barbecues</td>
+          <td><a href="#!">Clatronic</a></td>
+          <td>135.90€</td>
+          <td>Chrome</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="responsive-img" src="assets/img/tableau/12.jpg" alt="Barbecue Camping" title="Barbecue Camping"
+              width="100" height="100" />
+          </td>
+          <td>12</td>
+          <td>Barbecues</td>
+          <td><a href="#!">Camping</a></td>
+          <td>88.00€</td>
+          <td>Noir</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="responsive-img" src="assets/img/tableau/13.jpg" alt="Brouette Green" title="Brouette Green"
+              width="100" height="100" />
+          </td>
+          <td>13</td>
+          <td>Brouettes</td>
+          <td><a href="#!">Green</a></td>
+          <td>49.00€</td>
+          <td>Verte</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="hide-on-med-and-down">
+    <nav class="teal lighten-1 z-depth-2">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="index.html" class="brand-logo">Jarditou</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-            ><i class="material-icons">menu</i></a
-          >
-          <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Accueil</a></li>
-            <li class="active"><a href="tableau.html">Tableau</a></li>
-            <li><a href="formulaire.html">Formulaire</a></li>
+          <ul class="space-evenly">
+            <li><a href="#!">Mentions légales</a></li>
+            <li><a href="#!">Horaires</a></li>
+            <li><a href="#!">Plan du site</a></li>
           </ul>
         </div>
       </div>
     </nav>
+  </footer>
+</body>
 
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="index.html">Accueil</a></li>
-      <li class="active"><a href="tableau.html">Tableau</a></li>
-      <li><a href="formulaire.html">Formulaire</a></li>
-      <div class="divider"></div>
-      <li><a href="#!">Mentions légales</a></li>
-      <li><a href="#!">Horaires</a></li>
-      <li><a href="#!">Plan du site</a></li>
-    </ul>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script src="assets/js/index.js"></script>
 
-    <img
-      src="assets/img/promotion.jpg"
-      alt="Promotions lames de terrasse"
-      title="Promotions lames de terrasse"
-      class="responsive-img materialboxed"
-      width="100%"
-    />
-
-    <section class="section container">
-      <table class="animated jello centered responsive-table highlight">
-        <thead>
-          <tr>
-            <th>Photo</th>
-            <th>ID</th>
-            <th>Catégorie</th>
-            <th>Libellé</th>
-            <th>Prix</th>
-            <th>Couleur</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>
-              <img
-                class="responsive-img"
-                src="assets/img/tableau/7.jpg"
-                alt="Barbecue Aramis"
-                title="Barbecue Aramis"
-                width="100"
-                height="100"
-              />
-            </td>
-            <td>7</td>
-            <td>Barbecues</td>
-            <td><a href="#!">Aramis</a></td>
-            <td>110.00€</td>
-            <td>Brun</td>
-          </tr>
-
-          <tr>
-            <td>
-              <img
-                class="responsive-img"
-                src="assets/img/tableau/7.jpg"
-                alt="Barbecue Athos"
-                title="Barbecue Athos"
-                width="100"
-                height="100"
-              />
-            </td>
-            <td>8</td>
-            <td>Barbecues</td>
-            <td><a href="#!">Athos</a></td>
-            <td>249.99€</td>
-            <td>Noir</td>
-          </tr>
-
-          <tr>
-            <td>
-              <img
-                class="responsive-img"
-                src="assets/img/tableau/11.jpg"
-                alt="Barbecue Clatronic"
-                title="Barbecue Clatronic"
-                width="100"
-                height="100"
-              />
-            </td>
-            <td>11</td>
-            <td>Barbecues</td>
-            <td><a href="#!">Clatronic</a></td>
-            <td>135.90€</td>
-            <td>Chrome</td>
-          </tr>
-
-          <tr>
-            <td>
-              <img
-                class="responsive-img"
-                src="assets/img/tableau/12.jpg"
-                alt="Barbecue Camping"
-                title="Barbecue Camping"
-                width="100"
-                height="100"
-              />
-            </td>
-            <td>12</td>
-            <td>Barbecues</td>
-            <td><a href="#!">Camping</a></td>
-            <td>88.00€</td>
-            <td>Noir</td>
-          </tr>
-
-          <tr>
-            <td>
-              <img
-                class="responsive-img"
-                src="assets/img/tableau/13.jpg"
-                alt="Brouette Green"
-                title="Brouette Green"
-                width="100"
-                height="100"
-              />
-            </td>
-            <td>13</td>
-            <td>Brouettes</td>
-            <td><a href="#!">Green</a></td>
-            <td>49.00€</td>
-            <td>Verte</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <footer class="animated bounceInRight hide-on-med-and-down">
-      <nav class="teal lighten-1 z-depth-2">
-        <div class="nav-wrapper">
-          <div class="container">
-            <ul class="space-evenly">
-              <li><a href="#!">Mentions légales</a></li>
-              <li><a href="#!">Horaires</a></li>
-              <li><a href="#!">Plan du site</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </footer>
-  </body>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/materialize.min.js"></script>
-  <script src="assets/js/index.js"></script>
 </html>
