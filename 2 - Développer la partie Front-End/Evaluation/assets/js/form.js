@@ -1,17 +1,6 @@
 // Get Forms
 const mainForm = document.forms["mainForm"];
 
-// Creates a function that prevents XSS attacks
-String.prototype.escape = function() {
-  const tagsToReplace = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;"
-  };
-
-  return this.replace(/[&<>]/g, tag => tagsToReplace[tag] || tag);
-};
-
 const verify = () => {
   const hasErrors = [];
 
@@ -34,17 +23,17 @@ const verify = () => {
   const questionError = document.getElementById("questionError");
 
   // Gets all the forms element values
-  const address = document.getElementById("address").value.escape();
+  const address = document.getElementById("address").value;
   const cgu = document.getElementById("cgu").checked;
-  const city = document.getElementById("city").value.escape();
+  const city = document.getElementById("city").value;
   const date = document.getElementById("date").value;
-  const email = document.getElementById("email").value.escape();
-  const firstName = document.getElementById("firstName").value.escape();
+  const email = document.getElementById("email").value;
+  const firstName = document.getElementById("firstName").value;
   const gender1 = document.getElementById("gender1").checked;
   const gender2 = document.getElementById("gender2").checked;
-  const name = document.getElementById("name").value.escape();
-  const postal = document.getElementById("postal").value.escape();
-  const question = document.getElementById("question").value.escape();
+  const name = document.getElementById("name").value;
+  const postal = document.getElementById("postal").value;
+  const question = document.getElementById("question").value;
 
   // Checks is lastName is valid and if it's not empty
   if (isAlpha.test(name) === false && name !== "") {
@@ -161,7 +150,7 @@ const verify = () => {
     hasErrors[9] = false;
   }
 
-  console.log(question);
+  console.log(name);
 
   return hasErrors;
 };
