@@ -141,6 +141,7 @@ const verify = () => {
     hasErrors[8] = false;
   }
 
+  // Checks if the cgu aren't accepted
   if (!cgu) {
     cguError.innerText = "Vous devez accepter le traitement de ce formulaire.";
     cguError.style.display = "inline-block";
@@ -149,8 +150,6 @@ const verify = () => {
     cguError.style.display = "none";
     hasErrors[9] = false;
   }
-
-  console.log(name);
 
   return hasErrors;
 };
