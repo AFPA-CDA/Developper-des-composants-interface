@@ -70,24 +70,24 @@
 
           <div class="row">
             <div class="input-field col s6">
-              <label for="name">Votre nom :</label>
+              <label for="name">Votre nom* :</label>
               <input type="text" id="name" name="name" required />
               <span class="red-text" id="nameError"></span>
             </div>
             <div class="input-field col s6">
-              <label for="firstName">Votre prénom :</label>
+              <label for="firstName">Votre prénom* :</label>
               <input name="firstName" id="firstName" required type="text" />
               <span class="red-text" id="firstNameError"></span>
             </div>
           </div>
 
           <div class="row">
-            Sexe :
+            Sexe* :
             <p>
               <label>
                 <input
                   class="with-gap"
-                  id="gender"
+                  id="gender1"
                   type="radio"
                   name="gender"
                   value="Féminin"
@@ -101,18 +101,19 @@
                 <input
                   class="with-gap"
                   type="radio"
-                  id="gender"
+                  id="gender2"
                   name="gender"
                   value="Masculin"
                 />
                 <span>Masculin</span>
               </label>
             </p>
+            <span class="red-text" id="genderError"></span>
           </div>
 
           <div class="row">
             <div class="input-field col s12">
-              <label for="date">Date Naissance :</label>
+              <label for="date">Date Naissance* :</label>
               <input
                 class="datepicker"
                 id="date"
@@ -131,9 +132,9 @@
               <span class="red-text" id="postalError"></span>
             </div>
             <div class="input-field col s6">
-              <label for="adress">Adresse :</label>
-              <input id="adress" type="text" name="adress" />
-              <span class="red-text" id="adressError"></span>
+              <label for="address">Adresse :</label>
+              <input id="address" type="text" name="address" />
+              <span class="red-text" id="addressError"></span>
             </div>
           </div>
 
@@ -141,13 +142,13 @@
             <div class="input-field col s12">
               <label for="city">Ville :</label>
               <input id="city" type="text" name="city" />
-              <span class="red-text"></span>
+              <span class="red-text" id="cityError"></span>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s12">
-              <label for="email">Email :</label>
+              <label for="email">Email* :</label>
               <input
                 id="email"
                 type="email"
@@ -177,7 +178,7 @@
 
           <div class="row">
             <div class="input-field col s12">
-              <label for="question">Votre question :</label>
+              <label for="question">Votre question* :</label>
               <textarea
                 class="materialize-textarea"
                 name="question"
@@ -198,10 +199,11 @@
                 >
               </label>
             </p>
+            <span class="red-text" id="cguError"></span>
           </div>
 
           <button
-            class="btn waves-effect waves-light"
+            class="btn waves-effect waves-light teal lighten-1"
             id="btnSubmit"
             type="submit"
             name="btnSubmit"
