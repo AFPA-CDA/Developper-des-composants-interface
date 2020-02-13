@@ -1,11 +1,11 @@
 // Get Forms
 const mainForm = document.forms["mainForm"];
 
-const verify = () => {
+function verify() {
   const hasErrors = [];
 
   // Here lies all the regex used for this form
-  const isAlpha = /^[\wÀÂÆÇÉÈÊËÏÑÎÔŒÙÛÜŸ\'’\s-]+$/i;
+  const isAlpha = /^[\wÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\'’\s-]+$/i;
   const isDate = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/g;
   const isEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/g;
   const isPostal = /^\d{2}\s?\d{3}$/g;
@@ -37,11 +37,11 @@ const verify = () => {
 
   // Checks is name is valid and if it's not empty
   if (isAlpha.test(name) === false && name !== "") {
-    nameError.innerText = "Le nom n'est pas valide.";
+    nameError.textContent = "Le nom n'est pas valide.";
     nameError.style.display = "inline";
     hasErrors[0] = true;
   } else if (name === "") {
-    nameError.innerText = "Le nom est requis.";
+    nameError.textContent = "Le nom est requis.";
     nameError.style.display = "inline";
     hasErrors[0] = true;
   } else {
@@ -51,11 +51,11 @@ const verify = () => {
 
   // Checks if firstName is valid and if it's not empty
   if (isAlpha.test(firstName) === false && firstName !== "") {
-    firstNameError.innerText = "Le prénom n'est pas valide.";
+    firstNameError.textContent = "Le prénom n'est pas valide.";
     firstNameError.style.display = "inline";
     hasErrors[1] = true;
   } else if (firstName === "") {
-    firstNameError.innerText = "Le prénom est requis.";
+    firstNameError.textContent = "Le prénom est requis.";
     firstNameError.style.display = "inline";
     hasErrors[1] = true;
   } else {
@@ -65,7 +65,7 @@ const verify = () => {
 
   // Checks if postal is valid and if it's not empty
   if (isPostal.test(postal) === false && postal !== "") {
-    postalError.innerText = "Le code postal n'est pas valide.";
+    postalError.textContent = "Le code postal n'est pas valide.";
     postalError.style.display = "inline";
     hasErrors[2] = true;
   } else {
@@ -75,11 +75,11 @@ const verify = () => {
 
   // Checks if the email is valid and if it's not empty
   if (isEmail.test(email) === false && email !== "") {
-    emailError.innerText = "L'email n'est pas valide.";
+    emailError.textContent = "L'email n'est pas valide.";
     emailError.style.display = "inline";
     hasErrors[3] = true;
   } else if (email === "") {
-    emailError.innerText = "L'email est requis.";
+    emailError.textContent = "L'email est requis.";
     emailError.style.display = "inline";
     hasErrors[3] = true;
   } else {
@@ -89,7 +89,7 @@ const verify = () => {
 
   // Checks if the radio buttons aren't checked
   if (![gender1, gender2].includes(true)) {
-    genderError.innerText = "Un genre est requis.";
+    genderError.textContent = "Un genre est requis.";
     genderError.style.display = "inline";
     hasErrors[4] = true;
   } else {
@@ -99,11 +99,11 @@ const verify = () => {
 
   // Checks if the date is valid and not empty
   if (isDate.test(date) === false && date !== "") {
-    dateError.innerText = "La date est invalide.";
+    dateError.textContent = "La date est invalide.";
     dateError.style.display = "inline";
     hasErrors[5] = true;
   } else if (date === "") {
-    dateError.innerText = "La date est requise.";
+    dateError.textContent = "La date est requise.";
     dateError.style.display = "inline";
     hasErrors[5] = true;
   } else {
@@ -113,7 +113,7 @@ const verify = () => {
 
   // Checks if address is valid
   if (isAlpha.test(address) === false && address !== "") {
-    addressError.innerText = "L'adresse n'est pas valide.";
+    addressError.textContent = "L'adresse n'est pas valide.";
     addressError.style.display = "inline";
     hasErrors[6] = true;
   } else {
@@ -123,7 +123,7 @@ const verify = () => {
 
   // Checks if city is valid and not empty
   if (isAlpha.test(city) === false && city !== "") {
-    cityError.innerText = "La ville n'est pas valide.";
+    cityError.textContent = "La ville n'est pas valide.";
     cityError.style.display = "inline";
     hasErrors[7] = true;
   } else {
@@ -133,7 +133,7 @@ const verify = () => {
 
   // Checks if question is empty
   if (question === "") {
-    questionError.innerText = "La question est requise.";
+    questionError.textContent = "La question est requise.";
     questionError.style.display = "inline";
     hasErrors[8] = true;
   } else {
@@ -143,7 +143,8 @@ const verify = () => {
 
   // Checks if the cgu aren't accepted
   if (!cgu) {
-    cguError.innerText = "Vous devez accepter le traitement de ce formulaire.";
+    cguError.textContent =
+      "Vous devez accepter le traitement de ce formulaire.";
     cguError.style.display = "inline-block";
     hasErrors[9] = true;
   } else {
@@ -152,20 +153,17 @@ const verify = () => {
   }
 
   return hasErrors;
-};
+}
 
-mainForm.addEventListener("submit", e => {
+mainForm.addEventListener("submit", function(e) {
   // Prevents the user from submitting the form
   e.preventDefault();
 
   // We verify the user input
   const hasErrors = verify();
 
-  // If the inputs contains errors we return false else we return true
-  const isValid = hasErrors.includes(true) ? false : true;
-
   // If the form is valid we then submit it
-  if (isValid) {
+  if (!hasErrors.includes(true)) {
     mainForm.submit();
   }
 });

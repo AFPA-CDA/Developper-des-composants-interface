@@ -1,14 +1,40 @@
 /* Import fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-/* GLOBAL ELEMENTS */
+/* Global Elements */
 body {
   font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
 }
 
-/* CUSTOM CLASSES */
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 32.5px;
+}
+
+section > article > p {
+  font-size: 18px;
+}
+
+/* Custom Classes */
 .space-evenly {
   display: flex;
   justify-content: space-evenly;
+}
+
+/* Makes sure that the color has a 3:1 contrast ratio */
+.nav-wrapper {
+  background-color: #156058;
+}
+
+/* Custom ID */
+#promotion {
+  width: 100%;
+}
+
+#logo {
+  width: 33.33%;
 }
