@@ -35,7 +35,7 @@ const verify = () => {
   const postal = document.getElementById("postal").value;
   const question = document.getElementById("question").value;
 
-  // Checks is lastName is valid and if it's not empty
+  // Checks is name is valid and if it's not empty
   if (isAlpha.test(name) === false && name !== "") {
     nameError.innerText = "Le nom n'est pas valide.";
     nameError.style.display = "inline";
@@ -49,7 +49,7 @@ const verify = () => {
     hasErrors[0] = false;
   }
 
-  // Checks if name is valid and if it's not empty
+  // Checks if firstName is valid and if it's not empty
   if (isAlpha.test(firstName) === false && firstName !== "") {
     firstNameError.innerText = "Le prénom n'est pas valide.";
     firstNameError.style.display = "inline";
