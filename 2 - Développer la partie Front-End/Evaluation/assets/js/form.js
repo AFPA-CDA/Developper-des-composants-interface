@@ -7,6 +7,7 @@ function verify() {
   // Here lies all the regex used for this form
   const isAlpha = /^[\wÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\'’\s-]+$/i;
   const isDate = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/g;
+  const isDangerous = /[<>&]/g;
   const isEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/g;
   const isPostal = /^\d{2}\s?\d{3}$/g;
 
@@ -134,6 +135,10 @@ function verify() {
   // Checks if question is empty
   if (question === "") {
     questionError.textContent = "La question est requise.";
+    questionError.style.display = "inline";
+    hasErrors[8] = true;
+  } else if (isDangerous.test(question)) {
+    questionError.textContent = "[&;<;>] ne sont pas acceptés.";
     questionError.style.display = "inline";
     hasErrors[8] = true;
   } else {

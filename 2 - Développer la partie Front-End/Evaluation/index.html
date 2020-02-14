@@ -29,12 +29,12 @@
     <nav aria-label="Barre de navigation" role="navigation">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="index.html" class="brand-logo">Jarditou</a>
+          <a class="brand-logo" href="index.html">Jarditou</a>
           <a
             aria-haspopup
-            href="#"
-            data-target="mobile-demo"
             class="sidenav-trigger"
+            data-target="mobile-nav"
+            href="#"
             ><i class="material-icons">menu</i></a
           >
           <ul class="right hide-on-med-and-down">
@@ -46,11 +46,9 @@
       </div>
     </nav>
 
-    <div aria-labelledby="mobile-demo" role="navigation">
-      <ul class="sidenav" id="mobile-demo">
-        <li class="active" role="listitem">
-          <a href="index.html">Accueil</a>
-        </li>
+    <div aria-labelledby="mobile-nav" role="navigation">
+      <ul class="sidenav" id="mobile-nav">
+        <li class="active"><a href="index.html">Accueil</a></li>
         <li><a href="tableau.html">Tableau</a></li>
         <li><a href="formulaire.html">Formulaire</a></li>
         <li class="divider"></li>
@@ -120,8 +118,8 @@
         </section>
       </main>
 
-      <aside role="complementary">
-        <section class="col s3 hide-on-med-and-down">
+      <aside class="col s3 hide-on-med-and-down" role="complementary">
+        <section>
           <article role="article">
             <p class="flow-text">Col droite</p>
           </article>
@@ -129,7 +127,7 @@
       </aside>
     </div>
 
-    <footer class="hide-on-med-and-down" role="contentinfo">
+    <footer class="hide-on-med-and-down">
       <nav aria-label="Navigation footer" role="navigation">
         <div class="nav-wrapper">
           <div class="container">

@@ -4,7 +4,6 @@
 /* Global Elements */
 body {
   font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
 }
 
 h1 {
@@ -15,11 +14,32 @@ h2 {
   font-size: 32.5px;
 }
 
+label {
+  color: #595959 !important;
+}
+
+tr > td > a {
+  color: #005c8a;
+}
+
+tr > td > a:hover {
+  filter: contrast(80);
+}
+
+ul.dropdown-content.select-dropdown > li > span {
+  color: #0d3f38;
+}
+
 section > article > p {
   font-size: 18px;
 }
 
 /* Custom Classes */
+.datepicker-date-display {
+  background-color: #156057;
+  color: white;
+}
+
 .space-evenly {
   display: flex;
   justify-content: space-evenly;
@@ -31,6 +51,10 @@ section > article > p {
 }
 
 /* Custom ID */
+#btnSubmit {
+  background-color: #156058;
+}
+
 #promotion {
   width: 100%;
 }

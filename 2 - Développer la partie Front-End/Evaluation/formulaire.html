@@ -14,21 +14,27 @@
   </head>
 
   <body>
-    <div class="container center-align">
-      <img
-        class="responsive-img"
-        src="assets/img/jarditou_logo.png"
-        alt="Logo Jarditou"
-        title="Logo jarditou"
-        width="400"
-      />
-    </div>
+    <header role="banner">
+      <div class="container center-align">
+        <img
+          alt="Logo Jarditou"
+          class="responsive-img"
+          id="logo"
+          src="assets/img/jarditou_logo.png"
+          title="Logo jarditou"
+        />
+      </div>
+    </header>
 
-    <nav class="teal lighten-1 z-depth-2">
+    <nav aria-label="Barre de navigation" role="navigation">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="index.html" class="brand-logo">Jarditou</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          <a class="brand-logo" href="index.html">Jarditou</a>
+          <a
+            aria-haspopup
+            class="sidenav-trigger"
+            data-target="mobile-nav"
+            href="#"
             ><i class="material-icons">menu</i></a
           >
           <ul class="right hide-on-med-and-down">
@@ -40,43 +46,42 @@
       </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="tableau.html">Tableau</a></li>
-      <li class="active"><a href="formulaire.html">Formulaire</a></li>
-      <div class="divider"></div>
-      <li><a href="#!">Mentions légales</a></li>
-      <li><a href="#!">Horaires</a></li>
-      <li><a href="#!">Plan du site</a></li>
-    </ul>
+    <div aria-labelledby="mobile-nav" role="navigation">
+      <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="tableau.html">Tableau</a></li>
+        <li class="active"><a href="formulaire.html">Formulaire</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Mentions légales</a></li>
+        <li><a href="#!">Horaires</a></li>
+        <li><a href="#!">Plan du site</a></li>
+      </ul>
+    </div>
 
-    <img
-      src="assets/img/promotion.jpg"
-      alt="Promotions lames de terrasse"
-      title="Promotions lames de terrasse"
-      class="responsive-img materialboxed"
-      width="100%"
-    />
+    <div role="region">
+      <img
+        alt="Promotions lames de terrasse"
+        class="responsive-img materialboxed"
+        id="promotion"
+        src="assets/img/promotion.jpg"
+        title="Promotions lames de terrasse"
+      />
+    </div>
 
-    <section class="section">
+    <main class="section" role="main">
       <div class="container">
-        <form
-          novalidate
-          id="mainForm"
-          action="http://bienvu.net/script.php"
-          method="GET"
-        >
-          <span class="flow-text">Vos coordonnées</span>
+        <form action="http://bienvu.net/script.php" id="mainForm" method="GET">
+          <h1 class="center-align">Vos coordonnées</h1>
 
           <div class="row">
             <div class="input-field col s6">
               <label for="name">Votre nom* :</label>
-              <input type="text" id="name" name="name" required />
+              <input id="name" name="name" type="text" />
               <span class="red-text" id="nameError"></span>
             </div>
             <div class="input-field col s6">
               <label for="firstName">Votre prénom* :</label>
-              <input name="firstName" id="firstName" required type="text" />
+              <input id="firstName" name="firstName" type="text" />
               <span class="red-text" id="firstNameError"></span>
             </div>
           </div>
@@ -88,8 +93,8 @@
                 <input
                   class="with-gap"
                   id="gender1"
-                  type="radio"
                   name="gender"
+                  type="radio"
                   value="Féminin"
                 />
                 <span>Femme</span>
@@ -100,9 +105,9 @@
               <label>
                 <input
                   class="with-gap"
-                  type="radio"
                   id="gender2"
                   name="gender"
+                  type="radio"
                   value="Masculin"
                 />
                 <span>Masculin</span>
@@ -112,15 +117,11 @@
           </div>
 
           <div class="row">
-            <div class="input-field col s12">
-              <label for="date">Date Naissance* :</label>
-              <input
-                class="datepicker"
-                id="date"
-                type="text"
-                name="date"
-                required
-              />
+            <div class="col s12">
+              <label
+                >Date Naissance* :
+                <input class="datepicker" id="date" name="date" type="text" />
+              </label>
               <span class="red-text" id="dateError"></span>
             </div>
           </div>
@@ -128,12 +129,12 @@
           <div class="row">
             <div class="input-field col s6">
               <label for="postal">Code postal :</label>
-              <input id="postal" type="text" name="postal" />
+              <input id="postal" name="postal" type="text" />
               <span class="red-text" id="postalError"></span>
             </div>
             <div class="input-field col s6">
               <label for="address">Adresse :</label>
-              <input id="address" type="text" name="address" />
+              <input id="address" name="address" type="text" />
               <span class="red-text" id="addressError"></span>
             </div>
           </div>
@@ -141,7 +142,7 @@
           <div class="row">
             <div class="input-field col s12">
               <label for="city">Ville :</label>
-              <input id="city" type="text" name="city" />
+              <input id="city" name="city" type="text" />
               <span class="red-text" id="cityError"></span>
             </div>
           </div>
@@ -151,28 +152,27 @@
               <label for="email">Email* :</label>
               <input
                 id="email"
-                type="email"
                 name="email"
                 placeholder="dave.loper@afpa.fr"
-                required
+                type="email"
               />
               <span class="red-text" id="emailError"></span>
             </div>
           </div>
 
-          <span class="flow-text">Votre demande</span>
+          <h1 class="center-align">Votre demande</h1>
 
           <div class="row">
-            <div class="input-field col s12">
-              <select id="subject" name="subject">
-                <option value="Mes commandes">Mes commandes</option>
-                <option value="Question sur un produit"
-                  >Question sur un produit</option
-                >
-                <option value="Réclamation">Réclamation</option>
-                <option value="Autres">Autres</option>
-              </select>
-              <label for="subject">Sujet :</label>
+            <div class="col s12">
+              <label
+                >Sujet :
+                <select id="subject" name="subject">
+                  <option value="1">Mes commandes</option>
+                  <option value="2">Question sur un produit</option>
+                  <option value="3">Réclamation</option>
+                  <option value="4">Autres</option>
+                </select>
+              </label>
             </div>
           </div>
 
@@ -181,9 +181,9 @@
               <label for="question">Votre question* :</label>
               <textarea
                 class="materialize-textarea"
-                name="question"
-                id="question"
                 cols="20"
+                id="question"
+                name="question"
                 rows="3"
               ></textarea>
               <span class="red-text" id="questionError"></span>
@@ -193,7 +193,7 @@
           <div>
             <p>
               <label for="cgu">
-                <input type="checkbox" id="cgu" name="cgu" required />
+                <input name="cgu" id="cgu" type="checkbox" />
                 <span
                   >J'accepte le traitement informatique de ce formulaire.</span
                 >
@@ -203,20 +203,20 @@
           </div>
 
           <button
-            class="btn waves-effect waves-light teal lighten-1"
+            class="btn waves-effect waves-light"
             id="btnSubmit"
-            type="submit"
             name="btnSubmit"
+            type="submit"
           >
             Envoyer
             <i class="material-icons right">send</i>
           </button>
         </form>
       </div>
-    </section>
+    </main>
 
     <footer class="hide-on-med-and-down">
-      <nav class="teal lighten-1 z-depth-2">
+      <nav aria-label="Navigation footer" role="navigation">
         <div class="nav-wrapper">
           <div class="container">
             <ul class="space-evenly">
@@ -228,9 +228,9 @@
         </div>
       </nav>
     </footer>
-  </body>
 
-  <script src="assets/js/vendors/materialize.min.js"></script>
-  <script src="assets/js/index.js"></script>
-  <script src="assets/js/form.js"></script>
+    <script src="assets/js/vendors/materialize.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/form.js"></script>
+  </body>
 </html>
