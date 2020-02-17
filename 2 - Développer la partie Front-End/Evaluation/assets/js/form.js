@@ -150,7 +150,7 @@ function verify() {
   if (!cgu) {
     cguError.textContent =
       "Vous devez accepter le traitement de ce formulaire.";
-    cguError.style.display = "inline-block";
+    cguError.style.display = "inline";
     hasErrors[9] = true;
   } else {
     cguError.style.display = "none";
