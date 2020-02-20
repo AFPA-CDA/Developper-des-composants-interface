@@ -7,22 +7,22 @@
   <title>Phase 1 - Exercices</title>
 </head>
 <body>
-  <section>
-    <p>
-      Adresse Serveur
-      <b>
-        <?= $_SERVER["SERVER_ADDR"] ?>
-      </b>
-    </p>
+<section>
+  <p>
+    Adresse Serveur
+    <b>
+      <?= $_SERVER["SERVER_ADDR"] ?>
+    </b>
+  </p>
 
-    <hr>
+  <hr>
 
-    <p>
-      Adresse Client
-      <b>
-        <?= $_SERVER["REMOTE_ADDR"] ?>
-      </b>
-    </p>
-  </section>
+  <p>
+    Adresse Client
+    <b>
+      <?= $_SERVER["REMOTE_ADDR"] ?>
+    </b>
+  </p>
+</section>
 </body>
 </html>
