@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9614d8dc-d130-47da-b81c-ccfc175a6701" name="Default Changelist" comment="" />
+    <list default="true" id="b445277a-f938-4be7-989f-d28eb22dca14" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectId" id="1Y3y3SzQOLhNmhR25P3dhaMO7ko" />
+  <component name="ProjectId" id="1Y6sIGM4RN8QuOJLk6SvdpKtvuK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,42 +25,29 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9614d8dc-d130-47da-b81c-ccfc175a6701" name="Default Changelist" comment="" />
-      <created>1582185372355</created>
+      <changelist id="b445277a-f938-4be7-989f-d28eb22dca14" name="Default Changelist" comment="" />
+      <created>1582274297013</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582185372355</updated>
-      <workItem from="1582185373622" duration="2722000" />
-      <workItem from="1582211086797" duration="669000" />
-      <workItem from="1582211924312" duration="2497000" />
-      <workItem from="1582270375436" duration="1144000" />
+      <updated>1582274297013</updated>
+      <workItem from="1582274298379" duration="6163000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="603" y="75" width="740" height="889" key="#PHP" timestamp="1582211470972">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="603" y="75" width="740" height="889" key="#PHP/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582211470972" />
-    <state x="491" y="163" key="SettingsEditor" timestamp="1582211933066">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="491" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1582211933066" />
   </component>
 </project>

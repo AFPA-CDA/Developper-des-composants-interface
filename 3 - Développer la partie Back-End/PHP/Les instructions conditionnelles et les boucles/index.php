@@ -44,14 +44,14 @@
     </tr>
     </thead>
     <tbody>
-    <?php for ($i = 0; $i <= 12; $i++): ?>
+    <?php foreach (range(0, 12) as $i): ?>
       <tr>
         <td><?= $i ?></td>
-        <?php for ($j = 0; $j <= 12; $j++): ?>
+        <?php foreach (range(0, 12) as $j): ?>
           <td><?= $i * $j ?></td>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </tr>
-    <?php endfor; ?>
+    <?php endforeach; ?>
     </tbody>
   </table>
 </section>
