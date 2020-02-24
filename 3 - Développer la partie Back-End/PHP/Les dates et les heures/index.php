@@ -42,10 +42,14 @@
 
   <?php
   $currentDate = new DateTime();
-  $isLeap = date('L');
+  $isLeap = $currentDate->format('L');
   ?>
 
-  <p>L'année <?= $currentDate->format("Y"); ?><?= $isLeap ? " est" : " n'est pas" ?> bissextile</p>
+  <?php if($isLeap): ?>
+    <p>L'année <?= $currentDate->format("Y") ?> est bissextile</p>
+  <?php else: ?>
+    <p>L'année <?= $currentDate->format("Y") ?> n'est pas bissextile</p>
+  <?php endif; ?>
 </section>
 
 <hr>
@@ -61,7 +65,9 @@
 
   <p>
     <?php if ($errors["error_count"] > 0 || $errors["warning_count"] > 0): ?>
-      Vous venez de rencontrer une erreur !
+      <?php foreach($errors["warnings"] as $warning): ?>
+        <?= $warning; ?>
+      <?php endforeach; ?>
     <?php endif; ?>
   </p>
 </section>
