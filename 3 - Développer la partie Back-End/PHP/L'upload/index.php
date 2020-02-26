@@ -40,7 +40,6 @@ if ($fileExists && $_FILES["fichier"]["size"] > 0) {
     $path = realpath('../../files/');
     $name = basename($_FILES["fichier"]["name"]);
     move_uploaded_file($_FILES["fichier"]["tmp_name"], "$path/$name");
-    echo "$path$name"
     ?>
     <!-- If the mime type isn't allowed and there is no upload error show a message to the user -->
   <?php elseif (!in_array($mimeType, $allowedMimeTypes) && empty($_FILES["fichier"]["error"])): ?>
