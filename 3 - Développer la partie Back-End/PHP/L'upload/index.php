@@ -50,6 +50,8 @@ if ($fileExists && $_FILES["fichier"]["size"] > 0) {
     <!-- If there is an error show it to the user -->
   <?php elseif (!empty($_FILES["fichier"]["error"])): ?>
     <p><?= $fileMessages[$_FILES["fichier"]["error"]] ?></p>
+  <?php elseif (is_uploaded_file($_FILES["fichier"]["tmp_name"])): ?>
+    <p>Le fichier existe déja.</p>
   <?php endif; ?>
 <?php endif; ?>
 

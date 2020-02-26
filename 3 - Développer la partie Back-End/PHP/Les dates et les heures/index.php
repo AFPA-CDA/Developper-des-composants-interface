@@ -92,11 +92,12 @@
   <h3>Ajoutez 1 mois à la date courante.</h3>
 
   <?php
+  $currentDate = new DateTime();
   $modifiedDate = new DateTime();
   $modifiedDate->add(DateInterval::createFromDateString("1 months"));
   ?>
 
-  <p>Date actuelle: <?= date("d/m/Y"); ?></p>
+  <p>Date actuelle: <?= $currentDate->format("d/m/Y"); ?></p>
   <p>Date avec 1 mois ajouté: <?= $modifiedDate->format("d/m/Y"); ?></p>
 </section>
 
