@@ -26,7 +26,7 @@ if ($fileExists && $_FILES["fichier"]["size"] > 0) {
 }
 ?>
 
-<form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" enctype="multipart/form-data" method="post">
+<form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' enctype="multipart/form-data" method="post">
   <input name="fichier" type="file">
   <button type="submit">Submit</button>
 </form>
