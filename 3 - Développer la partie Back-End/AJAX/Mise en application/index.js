@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     };
 
+    // TODO: rename elements select
     // TODO: Add comments + closeCursor + Refactor + localhost revoir code + revoir code all cda + ranger github + voir calendrier
 
     btn1.addEventListener("click", function () {
