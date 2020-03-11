@@ -29,8 +29,6 @@ $departements = $stmt->fetchAll();
 
 // Closes the cursot
 $stmt->closeCursor();
-?>
 
-<?php foreach($departements as $departement): ?>
-    <option value="<?= $departement->dep_id ?>"><?= $departement->dep_nom ?></option>
-<?php endforeach; ?>
+// Returns the JSON version of the departements
+echo json_encode($departements);

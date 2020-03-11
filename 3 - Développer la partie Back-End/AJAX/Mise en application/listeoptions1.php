@@ -20,8 +20,7 @@ $regions = $query->fetchAll();
 
 // Closes the cursor
 $query->closeCursor();
-?>
 
-<?php foreach($regions as $region): ?>
-    <option value="<?= $region->reg_id ?>"><?= $region->reg_v_nom ?></option>
-<?php endforeach; ?>
+// Returns the JSON version of the regions
+echo json_encode($regions);
+
