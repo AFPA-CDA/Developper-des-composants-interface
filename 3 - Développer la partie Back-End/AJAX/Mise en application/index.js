@@ -1,29 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
     // List of all elements
-    const btn1 = document.getElementById("btn1");
-    const select1 = document.getElementById("select1");
-    const select2 = document.getElementById("select2");
+    const showDiscsBtn = document.getElementById("showDiscs");
+    const departementsSelect = document.getElementById("departementsSelect");
+    const regionsSelect = document.getElementById("regionsSelect");
 
+    // Creates another function for all HTMLElement used to create ajax requests
     HTMLElement.prototype.load = function (url, el) {
+        // Makes an ajax request to the given url
         axios.get(url).then(response => {
+            // If nothing went wrong it puts the data in the innerHTML
             el.innerHTML = response.data;
         }).catch(error => {
+            // If something went wrong it puts the error in the element textContent
             el.textContent = error;
         })
     };
 
-    // TODO: rename elements select
-    // TODO: Add comments + closeCursor + Refactor + localhost revoir code + revoir code all cda + ranger github + voir calendrier
-
-    btn1.addEventListener("click", function () {
-        btn1.load("listeproduit.php", btn1.nextElementSibling);
+    // On show discs button click
+    showDiscsBtn.addEventListener("click", function () {
+        // Makes an ajax request to listeproduit.php
+        this.load("listeproduit.php", this.nextElementSibling);
     });
 
-    select1.load("listeoptions1.php", select1);
+    // Makes an ajax request to listeoptions1.php
+    departementsSelect.load("listeoptions1.php", departementsSelect);
 
-    select1.addEventListener("change", function () {
-        select2.load(`listeoptions2.php?region_id=${this.value}`, select2)
+    // On departementsSelect change
+    departementsSelect.addEventListener("change", function () {
+        // Makes an ajax request to listeoptions2.php
+        regionsSelect.load(`listeoptions2.php?region_id=${this.value}`, regionsSelect)
     });
-
-
 });
