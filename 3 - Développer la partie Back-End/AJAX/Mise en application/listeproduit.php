@@ -12,6 +12,7 @@ try {
 // The SQL SELECT request
 $request = "SELECT * FROM disc INNER JOIN artist a ON disc.artist_id = a.artist_id";
 
+// Executes the SQL Query
 $query = $db->query($request);
 
 // Fetches all the discs

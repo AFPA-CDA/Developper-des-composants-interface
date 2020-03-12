@@ -19,7 +19,7 @@
 
 <section>
     <h1>Exercice 2</h1>
-    <h3>Reproduisez l'exemple ci-dessus en créant le fichier exemple1.html</h3>
+    <h3>Reprenez le second exercice de la phase 2, modifiez votre script PHP pour envoyer les données au format JSON.</h3>
 
     <select id="regionsSelect"></select>
     <select id="departementsSelect"></select>

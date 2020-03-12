@@ -9,14 +9,11 @@
 <body>
 <section>
     <h1>Exercice 1</h1>
-    <h3>Créez un fichier listeproduit.php qui permet d'afficher la liste des disques de la base record.</h3>
+    <h3>Concevez une page permettant de rechercher des informations sur les films.</h3>
 
-    <fieldset>
-        <legend>test</legend>
         <label for="movieSearch">Donnez un nom de film/serie</label>
         <input id="movieSearch" name="movieSearch" type="search">
         <button id="searchButton" type="submit">Rechercher</button>
-    </fieldset>
 
     <table id="moviesList">
         <thead>

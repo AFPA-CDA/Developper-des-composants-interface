@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         day: "numeric"
                     });
 
-                    // Formats the year, month and day of the movie release date using array destructuring
                     const [{value: day}, , {value: month}, , {value: year}] = dateFormat.formatToParts(rlDate);
 
                     // Creates a new tbody row
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Sets the title, the formatted release date and the poster image in the table
                     title.textContent = movie.title;
-                    releaseDate.textContent = `Le ${day} ${capitalize(month)} ${year}`;
+                    releaseDate.textContent = `${day} ${capitalize(month)} ${year}`;
                     poster.appendChild(image);
                 }
             }

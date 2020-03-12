@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Makes an ajax GET request to listeoptions2.php with the current region ID
         axios(`listeoptions2.php?region_id=${this.selectedOptions[0].value}`).then(response => {
             // Deletes all option in order to prevent duplicates
-            while (departementsSelect.options.length) departementsSelect.options.remove(0);
+            while (departementsSelect.hasChildNodes()) departementsSelect.removeChild(departementsSelect.firstChild);
 
             // For each departements
             for (let departement of response.data) {
