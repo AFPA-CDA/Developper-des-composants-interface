@@ -1,6 +1,6 @@
 package com.afpa.syntax;
 
-import java.util.Scanner;
+import com.afpa.Shared;
 
 public class Circle {
     /**
@@ -24,20 +24,6 @@ public class Circle {
     }
 
     /**
-     * Reads the user input for the circle radius
-     *
-     * @return The radius of the circle
-     */
-    public static double radius() {
-        // Prints the instruction to the user
-        System.out.println("Veuillez entrer le rayon: ");
-        // Creates a new Scanner with the system input
-        Scanner radiusInput = new Scanner(System.in);
-        // Returns the radius
-        return radiusInput.nextDouble();
-    }
-
-    /**
      * Prints the values to the console
      *
      * @param area          The area of the circle
@@ -47,18 +33,22 @@ public class Circle {
         System.out.printf("Aire: %1$,.2f", area);
         System.out.println();
         System.out.printf("Circonférence: %1$,.2f", circumference);
+        System.out.println();
     }
 
     /**
      * Executes the code properly
      */
     public static void exec() {
+        // Prints the header
         System.out.println("**** Périmètre et surface du Cercle (V1.0, 22/04/2020) ****");
 
-        double radius = radius();
+        // Calculates the radius, area and circumference
+        double radius = Shared.readDouble("Veuillez entrer le rayon: ");
         double area = area(radius);
         double circumference = circumference(radius);
 
+        // Prints the info to the console
         show(area, circumference);
     }
 }

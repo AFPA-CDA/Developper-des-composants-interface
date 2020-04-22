@@ -1,28 +1,19 @@
 package com.afpa.syntax;
 
-import java.util.Scanner;
+import com.afpa.Shared;
 
 public class Swap {
     /**
-     * Reads a double from the command line
-     * @param place The place for the number
-     * @return The double given by the user
-     */
-    public static double readDouble(String place) {
-        Scanner numberReader = new Scanner(System.in);
-        System.out.printf("Veuillez entrer le %s nombre !\n", place);
-        return numberReader.nextDouble();
-    }
-
-    /**
      * Prints the results to the user
-     * @param a The first double
-     * @param b The second double
+     *
+     * @param nX The first double
+     * @param nY The second double
      */
-    public static void show(double a, double b) {
-        System.out.printf("A = %1$,.2f", a);
+    public static void show(double nX, double nY) {
+        System.out.printf("nX = %1$,.2f", nX);
         System.out.println();
-        System.out.printf("B = %1$,.2f", b);
+        System.out.printf("nY = %1$,.2f", nY);
+        System.out.println();
     }
 
     /**
@@ -30,21 +21,23 @@ public class Swap {
      */
     public static void exec() {
         // Prints the header
-        System.out.println("**** Swap (V1.0, 22/04/2020) ****");
+        System.out.println("**** Swap (V1.1, 22/04/2020) ****");
 
         // Reads the first and the second double
-        double a = readDouble("premier");
-        double b = readDouble("second");
+        double nX = Shared.readDouble("Veuillez entrer nX: ");
+        double nY = Shared.readDouble("Veuillez entrer nY: ");
 
         // Prints the numbers before the swap
-        show(a, b);
+        System.out.println("---- Avant le swap ----");
+        show(nX, nY);
 
-        // Swaps the number
-        a = a + b;
-        b = a - b;
-        a = a - b;
+        // Swaps the numnYer
+        nX = nX + nY;
+        nY = nX - nY;
+        nX = nX - nY;
 
         // Prints the result to the user
-        show(a, b);
+        System.out.println("---- Après le swap -----");
+        show(nX, nY);
     }
 }

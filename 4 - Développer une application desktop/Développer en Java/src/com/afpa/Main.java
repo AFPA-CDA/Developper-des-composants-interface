@@ -1,6 +1,7 @@
 package com.afpa;
 
 import com.afpa.syntax.*;
+import com.afpa.operator.*;
 
 import java.util.Scanner;
 
@@ -11,6 +12,8 @@ public class Main {
                 .append("Bienvenue sur mes exercices !\n")
                 .append("1: Circle\n")
                 .append("2: Swap\n")
+                .append("3: Adder\n")
+                .append("4: Divider\n")
                 .toString();
 
         // Prints the header string
@@ -29,6 +32,12 @@ public class Main {
                 System.exit(0);
             case 2:
                 Swap.exec();
+                System.exit(0);
+            case 3:
+                Adder.exec();
+                System.exit(0);
+            case 4:
+                Divider.exec();
                 System.exit(0);
             default:
                 System.out.println("L'exercice demandé n'existe pas.");
