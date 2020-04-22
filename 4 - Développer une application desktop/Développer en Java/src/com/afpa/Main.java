@@ -1,16 +1,38 @@
 package com.afpa;
 
-import com.afpa.syntax.Circle;
+import com.afpa.syntax.*;
+
+import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("**** Périmètre et surface du Cercle (V1.0, 22/04/2020) ****");
+        // Creates the header string
+        String header = new StringBuilder()
+                .append("Bienvenue sur mes exercices !\n")
+                .append("1: Circle\n")
+                .append("2: Swap\n")
+                .toString();
 
-        double r = Circle.radius();
-        double a = Circle.area(r);
-        double c = Circle.circumference(r);
+        // Prints the header string
+        System.out.println(header);
+        System.out.println("Entrez le nombre de l'exercice que vous voulez tester.");
 
-        Circle.show(a, c);
+        // Creates a Scanner
+        Scanner scan = new Scanner(System.in);
+
+        // Gets the user input to choose the exercice
+        int choice = scan.nextInt();
+
+        switch (choice) {
+            case 1:
+                Circle.exec();
+                System.exit(0);
+            case 2:
+                Swap.exec();
+                System.exit(0);
+            default:
+                System.out.println("L'exercice demandé n'existe pas.");
+                System.exit(1);
+        }
     }
 }
