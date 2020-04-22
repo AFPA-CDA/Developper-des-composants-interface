@@ -2,8 +2,6 @@ package com.afpa.operator;
 
 import com.afpa.Shared;
 
-import java.util.Scanner;
-
 public class Adder {
     /**
      * Adds two number
@@ -23,10 +21,8 @@ public class Adder {
      * @param b The second double
      */
     public static void show(double a, double b) {
-        System.out.printf("a = %1$,.2f", a);
-        System.out.println();
-        System.out.printf("b = %1$,.2f", b);
-        System.out.println();
+        System.out.printf("a = %1$,.2f\n", a);
+        System.out.printf("b = %1$,.2f\n", b);
     }
 
     /**

@@ -10,10 +10,8 @@ public class Swap {
      * @param nY The second double
      */
     public static void show(double nX, double nY) {
-        System.out.printf("nX = %1$,.2f", nX);
-        System.out.println();
-        System.out.printf("nY = %1$,.2f", nY);
-        System.out.println();
+        System.out.printf("nX = %1$,.2f\n", nX);
+        System.out.printf("nY = %1$,.2f\n", nY);
     }
 
     /**
