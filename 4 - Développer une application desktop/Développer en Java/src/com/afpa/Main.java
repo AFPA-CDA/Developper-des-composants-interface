@@ -1,5 +1,6 @@
 package com.afpa;
 
+import com.afpa.control.conditions.*;
 import com.afpa.syntax.*;
 import com.afpa.operator.*;
 
@@ -20,6 +21,11 @@ public class Main {
                 .append("7: Seconds\n")
                 .append("8: ASCII\n")
                 .append("---------- Control structures ----------\n")
+                .append("\t---------- Conditions ----------\n")
+                .append("\t9: Even\n")
+                .append("\t10: Age\n")
+                .append("\t11: Calculator\n")
+                .append("\t12: Discount\n")
                 .toString();
 
         // Prints the header string
@@ -35,28 +41,40 @@ public class Main {
         switch (choice) {
             case 1:
                 Circle.exec();
-                System.exit(0);
+                break;
             case 2:
                 Swap.exec();
-                System.exit(0);
+                break;
             case 3:
                 Adder.exec();
-                System.exit(0);
+                break;
             case 4:
                 Divider.exec();
-                System.exit(0);
+                break;
             case 5:
                 Temperature.exec();
-                System.exit(0);
+                break;
             case 6:
                 Average.exec();
-                System.exit(0);
+                break;
             case 7:
                 Seconds.exec();
-                System.exit(0);
+                break;
             case 8:
                 Ascii.exec();
-                System.exit(0);
+                break;
+            case 9:
+                Even.exec();
+                break;
+            case 10:
+                Age.exec();
+                break;
+            case 11:
+                Calculator.exec();
+                break;
+            case 12:
+                Discount.exec();
+                break;
             default:
                 System.out.println("L'exercice demandé n'existe pas.");
                 System.exit(1);

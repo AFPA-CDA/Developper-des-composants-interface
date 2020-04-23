@@ -30,8 +30,8 @@ public class Circle {
      * @param circumference The circumference of the circle
      */
     public static void show(double area, double circumference) {
-        System.out.printf("Aire: %1$,.2f\n", area);
-        System.out.printf("Circonférence: %1$,.2f\n", circumference);
+        System.out.printf("Aire: %.2f\n", area);
+        System.out.printf("Circonférence: %.2f\n", circumference);
     }
 
     /**

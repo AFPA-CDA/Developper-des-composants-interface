@@ -40,4 +40,16 @@ public class Shared {
         // Returns the int
         return scan.nextInt();
     }
+
+    /**
+     * Reads an string from the command line
+     * @param message The message to print
+     * @return The string given by the user
+     */
+    public static String readString(String message) {
+        // Prints the instruction to the user
+        System.out.println(message);
+        // Returns the int
+        return scan.next();
+    }
 }

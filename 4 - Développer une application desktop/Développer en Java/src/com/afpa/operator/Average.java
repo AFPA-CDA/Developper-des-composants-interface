@@ -44,6 +44,6 @@ public class Average {
         show(supervised, interrogation, work);
 
         // Prints the result to the user
-        System.out.printf("Moyenne: %1$,.2f", calcAverage(supervised, interrogation, work));
+        System.out.printf("Moyenne: %.2f", calcAverage(supervised, interrogation, work));
     }
 }

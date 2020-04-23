@@ -40,6 +40,6 @@ public class Adder {
         show(a, b);
 
         // Prints the result
-        System.out.printf("%1$,.2f + %2$,.2f = %3$,.2f", a, b, add(a, b));
+        System.out.printf("%.2f + %.2f = %.2f", a, b, add(a, b));
     }
 }

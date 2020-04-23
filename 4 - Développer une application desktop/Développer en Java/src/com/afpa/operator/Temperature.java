@@ -23,6 +23,6 @@ public class Temperature {
         double fahrenheit = Shared.readDouble("Veuillez entrer la température en Fahrenheit: ");
 
         // Prints the result to the user
-        System.out.printf("Température en celsius: %1$,.1f", celsius(fahrenheit));
+        System.out.printf("Température en celsius: %.1f", celsius(fahrenheit));
     }
 }
