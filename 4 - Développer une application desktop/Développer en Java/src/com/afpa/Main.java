@@ -9,11 +9,17 @@ public class Main {
     public static void main(String[] args) {
         // Creates the header string
         String header = new StringBuilder()
-                .append("Bienvenue sur mes exercices !\n")
+                .append("---------- Syntaxe ----------\n")
                 .append("1: Circle\n")
                 .append("2: Swap\n")
+                .append("---------- Opérateurs ----------\n")
                 .append("3: Adder\n")
                 .append("4: Divider\n")
+                .append("5: Temperature\n")
+                .append("6: Average\n")
+                .append("7: Seconds\n")
+                .append("8: ASCII\n")
+                .append("---------- Control structures ----------\n")
                 .toString();
 
         // Prints the header string
@@ -38,6 +44,18 @@ public class Main {
                 System.exit(0);
             case 4:
                 Divider.exec();
+                System.exit(0);
+            case 5:
+                Temperature.exec();
+                System.exit(0);
+            case 6:
+                Average.exec();
+                System.exit(0);
+            case 7:
+                Seconds.exec();
+                System.exit(0);
+            case 8:
+                Ascii.exec();
                 System.exit(0);
             default:
                 System.out.println("L'exercice demandé n'existe pas.");
