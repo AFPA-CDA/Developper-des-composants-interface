@@ -11,16 +11,24 @@ public class Discount {
      * @return The final price with all taxes and discounts
      */
     public static double calculatePrice(double unitPrice, int quantity) {
+        // Declares variables
         double discount;
+        double shippingPrice;
 
         // Multiply the unitPrice and the quantity to get the totalPrice
         double totalPrice = unitPrice * quantity;
 
         // Calculates the shipping price
-        double shippingPrice = totalPrice > 500 ? 0 : totalPrice * 0.2;
+        if (totalPrice > 500) {
+            shippingPrice = 0;
+        } else {
+            shippingPrice = totalPrice * 0.2;
+        }
 
+        // The shippingPrice can't be less than 6€
         if (shippingPrice < 6) shippingPrice = 6;
 
+        // Calculates the discount based on the total price
         if (totalPrice >= 100) {
             if (totalPrice <= 200) {
                 discount = totalPrice * 0.05;
@@ -31,11 +39,11 @@ public class Discount {
             discount = 0;
         }
 
-        System.out.printf("Total price: %.2f\n", totalPrice);
-        System.out.printf("Shipping price: %.2f\n", shippingPrice);
-        System.out.printf("Discount: %.2f\n", discount);
+        System.out.printf("Prix Total: %.2f\n", totalPrice);
+        System.out.printf("Prix de la livraison: %.2f\n", shippingPrice);
+        System.out.printf("Remise: %.2f\n", discount);
 
-        return totalPrice + shippingPrice - discount;
+        return (totalPrice + shippingPrice) - discount;
     }
 
     /**
@@ -50,6 +58,6 @@ public class Discount {
         int quantity = Shared.readInt("Veuillez entrer la quantité: ");
 
         // Prints the final result to the user
-        System.out.printf("Final price: %.2f", calculatePrice(unitPrice, quantity));
+        System.out.printf("Prix TTC: %.2f", calculatePrice(unitPrice, quantity));
     }
 }

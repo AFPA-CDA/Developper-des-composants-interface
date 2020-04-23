@@ -5,11 +5,12 @@ import com.afpa.Shared;
 public class Calculator {
     /**
      * A simple calculator function
-     * @param a The first number
-     * @param b The second number
+     *
+     * @param a        The first number
+     * @param b        The second number
      * @param operator The operator to use
-     * @throws ArithmeticException If denominator is zero or operator is unknown
      * @return The calculated input
+     * @throws ArithmeticException If denominator is zero or operator is unknown
      */
     public static double calculate(double a, double b, char operator) throws ArithmeticException {
         if (b == 0) {
@@ -54,8 +55,7 @@ public class Calculator {
             System.out.printf("%.2f %c %.2f = %.2f", a, operatorChar, b, result);
         } catch (ArithmeticException e) {
             // Prints the error and exits the program if an ArithmeticException has been raised
-            System.out.println(e.toString());
-            System.exit(1);
+            e.printStackTrace();
         }
     }
 }

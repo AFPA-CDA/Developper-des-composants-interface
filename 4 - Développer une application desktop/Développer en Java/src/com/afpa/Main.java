@@ -39,45 +39,19 @@ public class Main {
         int choice = scan.nextInt();
 
         switch (choice) {
-            case 1:
-                Circle.exec();
-                break;
-            case 2:
-                Swap.exec();
-                break;
-            case 3:
-                Adder.exec();
-                break;
-            case 4:
-                Divider.exec();
-                break;
-            case 5:
-                Temperature.exec();
-                break;
-            case 6:
-                Average.exec();
-                break;
-            case 7:
-                Seconds.exec();
-                break;
-            case 8:
-                Ascii.exec();
-                break;
-            case 9:
-                Even.exec();
-                break;
-            case 10:
-                Age.exec();
-                break;
-            case 11:
-                Calculator.exec();
-                break;
-            case 12:
-                Discount.exec();
-                break;
-            default:
-                System.out.println("L'exercice demandé n'existe pas.");
-                System.exit(1);
+            case 1 -> Circle.exec();
+            case 2 -> Swap.exec();
+            case 3 -> Adder.exec();
+            case 4 -> Divider.exec();
+            case 5 -> Temperature.exec();
+            case 6 -> Average.exec();
+            case 7 -> Seconds.exec();
+            case 8 -> Ascii.exec();
+            case 9 -> Even.exec();
+            case 10 -> Age.exec();
+            case 11 -> Calculator.exec();
+            case 12 -> Discount.exec();
+            default -> System.out.println("L'exercice demandé n'existe pas.");
         }
     }
 }

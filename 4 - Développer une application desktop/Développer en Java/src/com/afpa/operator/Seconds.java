@@ -1,6 +1,7 @@
 package com.afpa.operator;
 
 import com.afpa.Shared;
+
 import java.time.LocalTime;
 
 public class Seconds {

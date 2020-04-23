@@ -5,6 +5,7 @@ import com.afpa.Shared;
 public class Even {
     /**
      * Returns a string saying if the number is odd or even
+     *
      * @param num The number to test
      * @return A string saying if the number is odd or even
      */

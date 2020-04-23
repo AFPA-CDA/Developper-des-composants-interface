@@ -5,6 +5,7 @@ import com.afpa.Shared;
 public class Temperature {
     /**
      * Converts fahrenheit to celsius
+     *
      * @param fahrenheit The temperature in Fahrenheit
      * @return The temperature in Celsius
      */

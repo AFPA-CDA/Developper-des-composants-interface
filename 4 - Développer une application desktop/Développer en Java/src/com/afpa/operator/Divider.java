@@ -49,8 +49,7 @@ public class Divider {
             System.out.printf("%.2f / %.2f = %.2f", a, b, divide(a, b));
         } catch (ArithmeticException e) {
             // Prints the error and exits the program if an ArithmeticException has been raised
-            System.out.println(e.toString());
-            System.exit(1);
+            e.printStackTrace();
         }
     }
 }
