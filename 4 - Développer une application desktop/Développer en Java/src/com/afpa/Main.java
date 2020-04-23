@@ -50,7 +50,7 @@ public class Main {
 
     public static String header() {
         return new StringBuilder()
-                .append("\n")
+                .append("\n\n")
                 .append("0: Exit\n")
                 .append("---------- Syntaxe ----------\n")
                 .append("1: Circle\n")
