@@ -41,7 +41,7 @@ public class Main {
                 case 7 -> Seconds.exec();
                 case 8 -> Ascii.exec();
                 case 9 -> Even.exec();
-                case 10 -> Age.exec();
+                case 10 -> com.afpa.control.conditions.Age.exec();
                 case 11 -> Calculator.exec();
                 case 12 -> Discount.exec();
                 case 13 -> Participation.exec();
@@ -52,6 +52,11 @@ public class Main {
                 case 18 -> MinAndMax.exec();
                 case 19 -> Multiples.exec();
                 case 20 -> Vowels.exec();
+                case 21 -> com.afpa.control.loops.Age.exec();
+                case 22 -> Prime.exec();
+                case 23 -> MagicNumber.exec();
+                case 24 -> Triangles.exec();
+                case 25 -> Palindrome.exec();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -97,6 +102,11 @@ public class Main {
                 .append("\t18: Min and Max\n")
                 .append("\t19: Multiples\n")
                 .append("\t20: Vowels\n")
+                .append("\t21: Age\n")
+                .append("\t22: Prime\n")
+                .append("\t23: Magic Number\n")
+                .append("\t24: Triangles\n")
+                .append("\t25: Palindrome\n")
                 .toString();
     }
 }

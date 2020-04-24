@@ -20,7 +20,7 @@ public class Avg {
             number = Shared.readDouble("Veuillez entrer un nombre [0 pour arrêter]: ");
             sum += number;
             count++;
-        } while (!Shared.scan.hasNext("0"));
+        } while (number != 0);
 
         // Prints the result to the user
         System.out.printf("Moyenne: %.2f", (sum / count));

@@ -24,7 +24,7 @@ public class MinAndMax {
             min = Math.min(min, number);
             max = Math.max(max, number);
             count++;
-        } while (!Shared.scan.hasNext("0"));
+        } while (number != 0);
 
         double average = sum / count;
 
