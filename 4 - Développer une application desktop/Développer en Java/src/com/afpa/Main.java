@@ -1,6 +1,7 @@
 package com.afpa;
 
 import com.afpa.control.conditions.*;
+import com.afpa.control.loops.*;
 import com.afpa.syntax.*;
 import com.afpa.operator.*;
 
@@ -43,7 +44,26 @@ public class Main {
                 case 10 -> Age.exec();
                 case 11 -> Calculator.exec();
                 case 12 -> Discount.exec();
+                case 13 -> Participation.exec();
+                case 14 -> BelowN.exec();
+                case 15 -> SumBelowN.exec();
+                case 16 -> SumInterval.exec();
+                case 17 -> Avg.exec();
+                case 18 -> MinAndMax.exec();
+                case 19 -> Multiples.exec();
+                case 20 -> Vowels.exec();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
+            }
+
+            // Asks the user if he wants to continue
+            System.out.println("\nVoulez vous continuer ? [y/n]");
+            // Scans the next input the user will give
+            String answer = scan.next();
+
+            // If the answer starts with a "n" we assume he wanna exits the program
+            if (answer.startsWith("n")) {
+                // Exits the program with a code 0
+                System.exit(0);
             }
         }
     }
@@ -68,6 +88,15 @@ public class Main {
                 .append("\t10: Age\n")
                 .append("\t11: Calculator\n")
                 .append("\t12: Discount\n")
+                .append("\t13: Participation\n")
+                .append("\t---------- Boucles ----------\n")
+                .append("\t14: Below N\n")
+                .append("\t15: Sum Below N\n")
+                .append("\t16: Sum Interval\n")
+                .append("\t17: Average\n")
+                .append("\t18: Min and Max\n")
+                .append("\t19: Multiples\n")
+                .append("\t20: Vowels\n")
                 .toString();
     }
 }
