@@ -2,6 +2,9 @@ package com.afpa;
 
 import com.afpa.control.conditions.*;
 import com.afpa.control.loops.*;
+import com.afpa.structures.BubbleSort;
+import com.afpa.structures.PreSizedArray;
+import com.afpa.structures.Remove;
 import com.afpa.syntax.*;
 import com.afpa.operator.*;
 
@@ -57,6 +60,9 @@ public class Main {
                 case 23 -> MagicNumber.exec();
                 case 24 -> Triangles.exec();
                 case 25 -> Palindrome.exec();
+                case 26 -> PreSizedArray.exec();
+                case 27 -> Remove.exec();
+                case 28 -> BubbleSort.exec();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -107,6 +113,10 @@ public class Main {
                 .append("\t23: Magic Number\n")
                 .append("\t24: Triangles\n")
                 .append("\t25: Palindrome\n")
+                .append("---------- Data Structures ----------\n")
+                .append("26: PreSized Array\n")
+                .append("27: Remove Array\n")
+                .append("28: Bubble Sort\n")
                 .toString();
     }
 }
