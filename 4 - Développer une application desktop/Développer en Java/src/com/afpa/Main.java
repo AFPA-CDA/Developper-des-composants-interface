@@ -2,9 +2,8 @@ package com.afpa;
 
 import com.afpa.control.conditions.*;
 import com.afpa.control.loops.*;
-import com.afpa.structures.BubbleSort;
-import com.afpa.structures.PreSizedArray;
-import com.afpa.structures.Remove;
+import com.afpa.functions.*;
+import com.afpa.structures.*;
 import com.afpa.syntax.*;
 import com.afpa.operator.*;
 
@@ -45,7 +44,7 @@ public class Main {
                 case 8 -> Ascii.exec();
                 case 9 -> Even.exec();
                 case 10 -> com.afpa.control.conditions.Age.exec();
-                case 11 -> Calculator.exec();
+                case 11 -> com.afpa.control.conditions.Calculator.exec();
                 case 12 -> Discount.exec();
                 case 13 -> Participation.exec();
                 case 14 -> BelowN.exec();
@@ -63,6 +62,13 @@ public class Main {
                 case 26 -> PreSizedArray.exec();
                 case 27 -> Remove.exec();
                 case 28 -> BubbleSort.exec();
+                case 29 -> com.afpa.functions.Calculator.exec();
+                case 30 -> Concat.exec();
+                case 31 -> CountWords.exec();
+                case 32 -> Fibonacci.exec();
+                case 33 -> Multiply.exec();
+                case 34 -> CountLetters.exec();
+                case 35 -> StringToken.exec();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -117,6 +123,14 @@ public class Main {
                 .append("26: PreSized Array\n")
                 .append("27: Remove Array\n")
                 .append("28: Bubble Sort\n")
+                .append("---------- Functions ----------\n")
+                .append("29: Calculator\n")
+                .append("30: Concat\n")
+                .append("31: Count Words\n")
+                .append("32: Fibonacci\n")
+                .append("33: Multiply\n")
+                .append("34: Count Letters\n")
+                .append("35: String Token\n")
                 .toString();
     }
 }

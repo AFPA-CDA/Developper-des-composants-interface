@@ -11,7 +11,7 @@ public class BubbleSort {
         // Store array length
         int n = arr.length;
         // Creates temporary variable
-        int temp = 0;
+        int temp;
 
         // For each elements in the array
         for (int i = 0; i < n; i++) {

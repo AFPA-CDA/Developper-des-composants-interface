@@ -49,7 +49,7 @@ public class Shared {
     public static String readString(String message) {
         // Prints the instruction to the user
         System.out.println(message);
-        // Returns the int
-        return scan.next();
+        // Returns the next line
+        return scan.nextLine();
     }
 }
