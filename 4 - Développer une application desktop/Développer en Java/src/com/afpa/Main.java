@@ -1,5 +1,6 @@
 package com.afpa;
 
+import com.afpa.classes.Exec;
 import com.afpa.control.conditions.*;
 import com.afpa.control.loops.*;
 import com.afpa.functions.*;
@@ -69,6 +70,8 @@ public class Main {
                 case 33 -> Multiply.exec();
                 case 34 -> CountLetters.exec();
                 case 35 -> StringToken.exec();
+                case 36 -> Exec.circle();
+                case 37 -> Exec.numberSort();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -131,6 +134,9 @@ public class Main {
                 .append("33: Multiply\n")
                 .append("34: Count Letters\n")
                 .append("35: String Token\n")
+                .append("---------- Classes ----------\n")
+                .append("36: Circle\n")
+                .append("37: Number Sort\n")
                 .toString();
     }
 }
