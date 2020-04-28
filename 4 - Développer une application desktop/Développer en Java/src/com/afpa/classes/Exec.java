@@ -21,4 +21,38 @@ public class Exec {
         numberSort.sort();
         numberSort.show();
     }
+
+    public static void vehicule() {
+        Bike bike = new Bike();
+        System.out.println(bike.run());
+    }
+
+    public static void triangle() {
+        Triangle triangle = new Triangle(12.5, 21.45);
+        System.out.println(triangle.area());
+    }
+
+    public static void client() {
+        Client firstClient = new Client("Welker", "Paul", "Baker Street", "Londre");
+        Client secondClient = new Client();
+        Client thirdClient = new Client();
+        Client fourthClient = new Client();
+
+        secondClient.setCity("Detroit");
+        secondClient.setFirstName("White");
+        secondClient.setName("Jack");
+
+        thirdClient.setCity("San Francisco");
+        thirdClient.setFirstName("Claypool");
+        thirdClient.setName("Les");
+
+        fourthClient.setCity("New York");
+        fourthClient.setFirstName("Thunders");
+        fourthClient.setName("Johnny");
+
+        System.out.printf("1er Client: \n%s\n", firstClient);
+        System.out.printf("2ème Client: \n%s\n", secondClient);
+        System.out.printf("3ème Client: \n%s\n", thirdClient);
+        System.out.printf("4ème Client: \n%s\n", fourthClient);
+    }
 }

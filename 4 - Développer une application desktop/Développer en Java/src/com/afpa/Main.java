@@ -72,6 +72,9 @@ public class Main {
                 case 35 -> StringToken.exec();
                 case 36 -> Exec.circle();
                 case 37 -> Exec.numberSort();
+                case 38 -> Exec.triangle();
+                case 39 -> Exec.vehicule();
+                case 40 -> Exec.client();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -137,6 +140,9 @@ public class Main {
                 .append("---------- Classes ----------\n")
                 .append("36: Circle\n")
                 .append("37: Number Sort\n")
+                .append("38: Triangle\n")
+                .append("39: Vehicule\n")
+                .append("40: Client\n")
                 .toString();
     }
 }
