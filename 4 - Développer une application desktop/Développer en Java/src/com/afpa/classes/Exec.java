@@ -55,4 +55,8 @@ public class Exec {
         System.out.printf("3ème Client: \n%s\n", thirdClient);
         System.out.printf("4ème Client: \n%s\n", fourthClient);
     }
+
+    public static void book() {
+        new Library();
+    }
 }

@@ -75,6 +75,7 @@ public class Main {
                 case 38 -> Exec.triangle();
                 case 39 -> Exec.vehicule();
                 case 40 -> Exec.client();
+                case 41 -> Exec.book();
                 default -> System.out.println("L'exercice demandé n'existe pas.");
             }
 
@@ -143,6 +144,7 @@ public class Main {
                 .append("38: Triangle\n")
                 .append("39: Vehicule\n")
                 .append("40: Client\n")
+                .append("41: Book\n")
                 .toString();
     }
 }
