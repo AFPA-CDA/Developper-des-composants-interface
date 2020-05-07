@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.controllers.Colors">
+   <children>
+      <Rectangle fx:id="colorResult" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="155.0" layoutX="14.0" layoutY="14.0" stroke="#ffffff00" strokeType="INSIDE" width="572.0" />
+      <Slider fx:id="redSlider" layoutX="61.0" layoutY="191.0" max="255.0" prefHeight="35.0" prefWidth="344.0" />
+      <Rectangle fx:id="redRectangle" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="35.0" layoutX="431.0" layoutY="191.0" stroke="#ffffff00" strokeType="INSIDE" width="155.0" />
+      <Slider fx:id="greenSlider" layoutX="61.0" layoutY="257.0" max="255.0" prefHeight="35.0" prefWidth="344.0" />
+      <Rectangle fx:id="greenRectangle" arcHeight="5.0" arcWidth="5.0" fill="#4ea450" height="35.0" layoutX="431.0" layoutY="257.0" stroke="#ffffff00" strokeType="INSIDE" width="155.0" />
+      <Slider fx:id="blueSlider" layoutX="61.0" layoutY="325.0" max="255.0" prefHeight="35.0" prefWidth="344.0" />
+      <Rectangle fx:id="blueRectangle" arcHeight="5.0" arcWidth="5.0" fill="#4e5ba3" height="35.0" layoutX="431.0" layoutY="325.0" stroke="#ffffff00" strokeType="INSIDE" width="155.0" />
+   </children>
+</AnchorPane>
