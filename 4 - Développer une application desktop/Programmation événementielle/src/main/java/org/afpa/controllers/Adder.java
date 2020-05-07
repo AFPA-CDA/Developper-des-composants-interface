@@ -43,7 +43,6 @@ public class Adder implements Initializable {
     public void clear() {
         this.result = 0;
         this.TextAreaAdder.clear();
-        this.TextAreaAdder.appendText(String.valueOf(this.result));
     }
 
     /**
