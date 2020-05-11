@@ -1,4 +1,6 @@
+org/afpa/pojo/Client.class
 org/afpa/controllers/Checked.class
 org/afpa/App.class
+org/afpa/controllers/Table.class
 org/afpa/controllers/Adder.class
 org/afpa/controllers/Colors.class

@@ -25,7 +25,7 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("colors"));
+        scene = new Scene(loadFXML("table"));
         stage.setScene(scene);
         stage.show();
     }
@@ -34,7 +34,7 @@ public class App extends Application {
      * @param fxml The fxml file to load
      * @throws IOException If the function can't read the file
      */
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
