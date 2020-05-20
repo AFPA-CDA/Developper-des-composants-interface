@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class SingleSearchTable implements Initializable {
+public class SelectSupplier implements Initializable {
     @FXML
     private TextField supplier, name, address, postalCode, contact, city;
 

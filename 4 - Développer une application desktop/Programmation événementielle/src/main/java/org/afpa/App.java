@@ -25,7 +25,7 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("JDBC/single_search_table"));
+        scene = new Scene(loadFXML("JDBC/select_order"));
         stage.setScene(scene);
         stage.show();
     }
