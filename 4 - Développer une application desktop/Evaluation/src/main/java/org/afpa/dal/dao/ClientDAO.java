@@ -1,19 +1,22 @@
 package org.afpa.dal.dao;
 
+import org.afpa.dal.interfaces.CRUD;
 import org.afpa.dal.models.Client;
-import org.afpa.interfaces.ClientCRUD;
+import org.afpa.dal.shared.Connection;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
  * The Data Access Object for the Client model.
  *
- * @see org.afpa.interfaces.ClientCRUD
+ * @see org.afpa.dal.interfaces.CRUD<Client>
  * @see Client
  */
-public final class ClientDAO implements ClientCRUD {
-    private final Connection connection;
+public final class ClientDAO implements CRUD<Client> {
+    private final java.sql.Connection connection;
 
     /**
      * Primary constructor
@@ -21,7 +24,7 @@ public final class ClientDAO implements ClientCRUD {
      * @throws SQLException If the connection cannot be established
      */
     public ClientDAO() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel?serverTimezone=UTC", "root", "10495");
+        connection = new Connection().setUrl("jdbc:mysql://localhost:3306/hotel?serverTimezone=UTC").setPassword("10495").setUser("root").getConnection();
     }
 
     /**
@@ -58,7 +61,7 @@ public final class ClientDAO implements ClientCRUD {
         Client client = new Client();
 
         // Use a Prepared Statement to avoid SQL Injection
-        PreparedStatement clientStatement = connection.prepareStatement("SELECT * FROM CLIENT WHERE cli_id = ?");
+        PreparedStatement clientStatement = connection.prepareStatement("SELECT * FROM client WHERE cli_id = ?");
         clientStatement.setInt(1, id);
 
         // Executes the query and returns the result set
@@ -91,7 +94,7 @@ public final class ClientDAO implements ClientCRUD {
     @Override
     public void insert(Client client) throws SQLException {
         // Use a Prepared Statement to avoid SQL Injection
-        PreparedStatement ps = connection.prepareStatement("INSERT INTO CLIENT(cli_nom, cli_prenom, cli_adresse, cli_ville) VALUES (?,?,?,?)");
+        PreparedStatement ps = connection.prepareStatement("INSERT INTO client(cli_nom, cli_prenom, cli_adresse, cli_ville) VALUES (?,?,?,?)");
         ps.setString(1, client.getLastName());
         ps.setString(2, client.getFirstName());
         ps.setString(3, client.getAddress());
@@ -148,7 +151,7 @@ public final class ClientDAO implements ClientCRUD {
     @Override
     public void update(Client client) throws SQLException {
         // Use a Prepared Statement to avoid SQL Injection
-        PreparedStatement ps = connection.prepareStatement("UPDATE CLIENT SET cli_nom = ?, cli_prenom = ?, cli_adresse = ?, cli_ville = ? WHERE cli_id = ?");
+        PreparedStatement ps = connection.prepareStatement("UPDATE client SET cli_nom = ?, cli_prenom = ?, cli_adresse = ?, cli_ville = ? WHERE cli_id = ?");
         ps.setString(1, client.getLastName());
         ps.setString(2, client.getFirstName());
         ps.setString(3, client.getAddress());
