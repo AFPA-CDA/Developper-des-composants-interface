@@ -14,10 +14,14 @@ mainClassName = 'org.afpa.App'
 group 'org.afpa'
 version '1.0-SNAPSHOT'
 
+sourceSets.main.resources.srcDirs("src/main/java").includes.addAll(["**/*.*"])
+sourceSets.main.resources.srcDirs("src/main/resources").includes.addAll(["**/*.fxml", "**/*.css","**/*.png"])
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.20'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
