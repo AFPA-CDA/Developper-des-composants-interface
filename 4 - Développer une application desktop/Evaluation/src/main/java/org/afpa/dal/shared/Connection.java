@@ -15,7 +15,11 @@ public final class Connection {
      * @throws SQLException An error if the database failed to connect
      */
     public java.sql.Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(info.getProperty("url"), info);
+        java.sql.Connection connection = DriverManager.getConnection(info.getProperty("url"), info);
+
+        connection.setAutoCommit(false);
+
+        return connection;
     }
 
     /**

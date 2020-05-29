@@ -34,15 +34,12 @@ public final class Index implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            // Fills an ArrayList with all the clients on the database
-            ArrayList<Client> databaseClients = this.clientDAO.list();
+        // Fills an ArrayList with all the clients on the database
+        ArrayList<Client> databaseClients = this.clientDAO.list();
 
+        if (databaseClients != null) {
             // Adds all the clients from the database to the client's observable list
             this.clientObservableList.addAll(databaseClients);
-        } catch (SQLException throwable) {
-            // Catch SQLExceptions if any
-            throwable.printStackTrace();
         }
 
         this.firstName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
